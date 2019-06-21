@@ -91,6 +91,6 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
     }
 
     private void disablePlugin() {
-        getServer().getPluginManager().disablePlugin(this);
+        _server.getPluginManager().disablePlugin(this);
     }
 }
