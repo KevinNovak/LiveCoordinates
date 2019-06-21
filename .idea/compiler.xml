@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="livecoordinates-core" />
+        <module name="livecoordinates-craftbukkit_1_13_R1" />
         <module name="livecoordinates-craftbukkit_1_14_R1" />
-        <module name="craftbukkit_1_13_R1" />
+        <module name="livecoordinates-core" />
         <module name="livecoordinates-craftbukkit_1_13_R2" />
       </profile>
       <profile name="Annotation profile for LiveCoordinates" enabled="true">
@@ -19,8 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="craftbukkit_1_13_R1" target="1.8" />
       <module name="livecoordinates-core" target="1.8" />
+      <module name="livecoordinates-craftbukkit_1_13_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_13_R2" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_14_R1" target="1.8" />
       <module name="livecoordinates-dist" target="1.5" />

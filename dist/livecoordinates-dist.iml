@@ -7,8 +7,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="livecoordinates-core" />
-    <orderEntry type="module" module-name="craftbukkit_1_13_R1" />
-    <orderEntry type="library" name="Maven: me.kevinnovak:livecoordinates-craftbukkit_1_13_R2:1.0.0" level="project" />
+    <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_13_R1" />
+    <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_13_R2" />
     <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_14_R1" />
   </component>
 </module>
