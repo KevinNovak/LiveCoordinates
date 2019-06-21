@@ -51,6 +51,11 @@
         </dependency>
         <dependency>
             <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_11_R1</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
             <artifactId>livecoordinates-craftbukkit_1_12_R1</artifactId>
             <version>${project.parent.version}</version>
         </dependency>

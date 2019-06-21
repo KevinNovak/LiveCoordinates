@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/core/livecoordinates-core.iml" filepath="$PROJECT_DIR$/core/livecoordinates-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craftbukkit_1_11_R1/livecoordinates-craftbukkit_1_11_R1.iml" filepath="$PROJECT_DIR$/craftbukkit_1_11_R1/livecoordinates-craftbukkit_1_11_R1.iml" />
       <module fileurl="file://$PROJECT_DIR$/craftbukkit_1_12_R1/livecoordinates-craftbukkit_1_12_R1.iml" filepath="$PROJECT_DIR$/craftbukkit_1_12_R1/livecoordinates-craftbukkit_1_12_R1.iml" />
       <module fileurl="file://$PROJECT_DIR$/craftbukkit_1_13_R1/livecoordinates-craftbukkit_1_13_R1.iml" filepath="$PROJECT_DIR$/craftbukkit_1_13_R1/livecoordinates-craftbukkit_1_13_R1.iml" />
       <module fileurl="file://$PROJECT_DIR$/craftbukkit_1_13_R2/livecoordinates-craftbukkit_1_13_R2.iml" filepath="$PROJECT_DIR$/craftbukkit_1_13_R2/livecoordinates-craftbukkit_1_13_R2.iml" />
