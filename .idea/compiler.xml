@@ -12,6 +12,7 @@
         <module name="livecoordinates-craftbukkit_1_11_R1" />
         <module name="livecoordinates-craftbukkit_1_13_R2" />
         <module name="livecoordinates-craftbukkit_1_13_R1" />
+        <module name="livecoordinates-craftbukkit_1_10_R1" />
       </profile>
       <profile name="Annotation profile for LiveCoordinates" enabled="true">
         <sourceOutputDir name="../target/generated-sources/annotations" />
@@ -22,6 +23,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="livecoordinates-core" target="1.8" />
+      <module name="livecoordinates-craftbukkit_1_10_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_11_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_12_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_13_R1" target="1.8" />
