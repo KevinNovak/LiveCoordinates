@@ -1,0 +1,4 @@
+# Configuration file for LiveCoordinates
+# Created by KevinNovak
+
+compassFormat: '&f{X} &8| &f{Y} &8| &f{Z}'

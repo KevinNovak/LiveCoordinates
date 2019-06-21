@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/core/livecoordinates-core.iml" filepath="$PROJECT_DIR$/core/livecoordinates-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/craftbukkit_1_14_R1/livecoordinates-craftbukkit_1_14_R1.iml" filepath="$PROJECT_DIR$/craftbukkit_1_14_R1/livecoordinates-craftbukkit_1_14_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dist/livecoordinates-dist.iml" filepath="$PROJECT_DIR$/dist/livecoordinates-dist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/livecoordinates-parent.iml" filepath="$PROJECT_DIR$/livecoordinates-parent.iml" />
+    </modules>
+  </component>
+</project>
