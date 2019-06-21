@@ -12,7 +12,7 @@
 
     <groupId>me.kevinnovak</groupId>
     <artifactId>livecoordinates-dist</artifactId>
-    <version>${project.parent.version</version>
+    <version>${project.parent.version}</version>
 
     <packaging>jar</packaging>
 
