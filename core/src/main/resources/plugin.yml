@@ -7,5 +7,5 @@ api-version: 1.13
 
 permissions:
   livecoordinates.display:
-    description: Allowed to see live coordinates.
+    description: View your live coordinates.
     default: true
