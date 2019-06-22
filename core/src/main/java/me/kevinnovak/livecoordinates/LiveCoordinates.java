@@ -66,6 +66,11 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
+        Player player = event.getPlayer();
+        if (!PermissionManager.hasPermission(player, Permission.DISPLAY)) {
+            return;
+        }
+
         LocationVector fromVector = new LocationVector(event.getFrom());
         LocationVector toVector = new LocationVector(event.getTo());
         if (fromVector != toVector) {
@@ -75,6 +80,9 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
 
     private void updateAllDisplays() {
         for (Player player : _server.getOnlinePlayers()) {
+            if (!PermissionManager.hasPermission(player, Permission.DISPLAY)) {
+                return;
+            }
             updateDisplay(player);
         }
     }

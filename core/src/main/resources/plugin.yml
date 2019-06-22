@@ -4,3 +4,8 @@ version: ${project.parent.version}
 author: KevinNovak
 description: ${project.parent.description}
 api-version: 1.13
+
+permissions:
+  livecoordinates.display:
+    description: Allowed to see live coordinates.
+    default: true
