@@ -7,6 +7,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="livecoordinates-core" />
+    <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_8_R1" />
+    <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_8_R2" />
+    <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_8_R3" />
     <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_9_R1" />
     <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_9_R2" />
     <orderEntry type="module" module-name="livecoordinates-craftbukkit_1_10_R1" />

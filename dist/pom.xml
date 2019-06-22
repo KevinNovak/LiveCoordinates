@@ -51,6 +51,21 @@
         </dependency>
         <dependency>
             <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_8_R1</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_8_R2</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_8_R3</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
             <artifactId>livecoordinates-craftbukkit_1_9_R1</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
