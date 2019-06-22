@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="livecoordinates-craftbukkit_1_9_R1" />
         <module name="livecoordinates-craftbukkit_1_12_R1" />
         <module name="livecoordinates-craftbukkit_1_14_R1" />
+        <module name="livecoordinates-craftbukkit_1_9_R2" />
         <module name="livecoordinates-core" />
         <module name="livecoordinates-craftbukkit_1_11_R1" />
         <module name="livecoordinates-craftbukkit_1_13_R2" />
@@ -29,6 +31,8 @@
       <module name="livecoordinates-craftbukkit_1_13_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_13_R2" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_14_R1" target="1.8" />
+      <module name="livecoordinates-craftbukkit_1_9_R1" target="1.8" />
+      <module name="livecoordinates-craftbukkit_1_9_R2" target="1.8" />
       <module name="livecoordinates-dist" target="1.5" />
       <module name="livecoordinates-parent" target="1.5" />
     </bytecodeTargetLevel>
