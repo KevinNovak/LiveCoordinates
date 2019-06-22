@@ -20,7 +20,7 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
     private InternalsProvider _internals;
     private BukkitScheduler _scheduler;
 
-    private String _compassFormat;
+    private String _coordinatesFormat;
 
     @Override
     public void onEnable() {
@@ -47,11 +47,13 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
         _logger.info("Loading config.");
         this.saveDefaultConfig();
         _config = this.getConfig();
-        _compassFormat = ChatColor.translateAlternateColorCodes('&', _config.getString("compassFormat"));
+        _coordinatesFormat = ChatColor.translateAlternateColorCodes('&', _config.getString("coordinatesFormat"));
 
         _logger.info("Registering events.");
         _server.getPluginManager().registerEvents(this, this);
-        _scheduler.scheduleSyncRepeatingTask(this, () -> updateAllDisplays(), 0L, 20L);
+
+        long updateInterval = _config.getInt("updateInterval") / 50;
+        _scheduler.scheduleSyncRepeatingTask(this, () -> updateAllDisplays(), 0L, updateInterval);
 
         _logger.info("Plugin enabled!");
     }
@@ -78,7 +80,7 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
     }
 
     private void updateDisplay(Player player, LocationVector vector) {
-        String message = _compassFormat
+        String message = _coordinatesFormat
                 .replace("{X}", NumberFormat.getIntegerInstance().format(vector.getX()))
                 .replace("{Y}", NumberFormat.getIntegerInstance().format(vector.getY()))
                 .replace("{Z}", NumberFormat.getIntegerInstance().format(vector.getZ()));

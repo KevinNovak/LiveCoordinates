@@ -1,4 +1,14 @@
 # Configuration file for LiveCoordinates
 # Created by KevinNovak
 
-compassFormat: '&f{X} &8| &f{Y} &8| &f{Z}'
+# The format to display coordinates in
+# Supports color codes
+# Variables:
+#   {X} is your current x-coordinate
+#   {Y} is your current y-coordinate
+#   {Z} is your current z-coordinate
+coordinatesFormat: '&f{X} &8| &f{Y} &8| &f{Z}'
+
+# How often to update players coordinates, in milliseconds
+# Best to leave at default unless experiencing issues
+updateInterval: 1000
