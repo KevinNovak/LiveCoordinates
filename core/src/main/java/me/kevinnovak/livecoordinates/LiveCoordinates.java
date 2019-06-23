@@ -3,7 +3,10 @@ package me.kevinnovak.livecoordinates;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,16 +14,22 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
 
+import java.io.File;
 import java.text.NumberFormat;
+import java.util.Arrays;
+import java.util.List;
 
 public class LiveCoordinates extends JavaPlugin implements Listener {
     private FileConfiguration _config;
     private Server _server;
     private Logger _logger;
-    private InternalsProvider _internals;
     private BukkitScheduler _scheduler;
+    private CommandManager _commandManager;
+    private InternalsProvider _internals;
 
     private String _coordinatesFormat;
+
+    private List<String> baseAliases = Arrays.asList("lc", "livecoordinates", "livecoords", "livecoor", "livec", "lcoordinates", "lcoords", "lcoor");
 
     @Override
     public void onEnable() {
@@ -49,6 +58,15 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
         _config = this.getConfig();
         _coordinatesFormat = ChatColor.translateAlternateColorCodes('&', _config.getString("coordinatesFormat"));
 
+        File commandsFile = new File(this.getDataFolder() + "/commands.yml");
+        if (!commandsFile.exists()) {
+            _logger.info("Copying default commands file.");
+            this.saveResource("commands.yml", false);
+        }
+        _logger.info("Loading commands file.");
+        YamlConfiguration commandConfig = YamlConfiguration.loadConfiguration(commandsFile);
+        _commandManager = new CommandManager(commandConfig, _logger);
+
         _logger.info("Registering events.");
         _server.getPluginManager().registerEvents(this, this);
 
@@ -76,6 +94,39 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
         if (fromVector != toVector) {
             updateDisplay(event.getPlayer(), toVector);
         }
+    }
+
+    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
+        _logger.info("Command ran");
+        if (!(sender instanceof Player)) {
+            return true;
+        }
+        Player player = (Player) sender;
+
+        String command = cmd.getName().toLowerCase();
+        _logger.info(command);
+        if (!baseAliases.contains(command)) {
+            return true;
+        }
+
+        if (args.length <= 0) {
+            player.sendMessage("help");
+            return true;
+        }
+
+        String subCommand = args[0];
+        if (_commandManager.isCommand("help", subCommand)) {
+            player.sendMessage("help");
+            return true;
+        }
+
+        if (_commandManager.isCommand("toggle", subCommand)) {
+            player.sendMessage("toggle");
+            return true;
+        }
+
+        player.sendMessage("help");
+        return true;
     }
 
     private void updateAllDisplays() {

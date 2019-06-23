@@ -1,0 +1,9 @@
+# Commands file for LiveCoordinates
+# Created by KevinNovak
+
+help:
+  - 'help'
+  - '?'
+
+toggle:
+  - 'toggle'
