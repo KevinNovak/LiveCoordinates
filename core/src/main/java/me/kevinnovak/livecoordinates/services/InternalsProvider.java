@@ -1,4 +1,4 @@
-package me.kevinnovak.livecoordinates;
+package me.kevinnovak.livecoordinates.services;
 
 import org.bukkit.entity.Player;
 

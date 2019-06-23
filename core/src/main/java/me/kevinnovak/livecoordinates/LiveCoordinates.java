@@ -1,6 +1,12 @@
 package me.kevinnovak.livecoordinates;
 
-import me.kevinnovak.livecoordinates.command.CommandBase;
+import me.kevinnovak.livecoordinates.commands.CommandBase;
+import me.kevinnovak.livecoordinates.models.LocationVector;
+import me.kevinnovak.livecoordinates.models.Permission;
+import me.kevinnovak.livecoordinates.services.InternalsProvider;
+import me.kevinnovak.livecoordinates.utils.AliasManager;
+import me.kevinnovak.livecoordinates.utils.Logger;
+import me.kevinnovak.livecoordinates.utils.PermissionManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;

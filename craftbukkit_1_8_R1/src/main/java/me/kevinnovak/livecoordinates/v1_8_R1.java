@@ -1,5 +1,6 @@
 package me.kevinnovak.livecoordinates;
 
+import me.kevinnovak.livecoordinates.services.InternalsProvider;
 import net.minecraft.server.v1_8_R1.ChatSerializer;
 import net.minecraft.server.v1_8_R1.IChatBaseComponent;
 import net.minecraft.server.v1_8_R1.PacketPlayOutChat;

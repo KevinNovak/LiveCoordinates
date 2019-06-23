@@ -1,4 +1,4 @@
-package me.kevinnovak.livecoordinates;
+package me.kevinnovak.livecoordinates.utils;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -9,7 +9,7 @@ public class AliasManager {
     private HashMap<String, List<String>> _aliases;
     private Logger _logger;
 
-    AliasManager(YamlConfiguration commandConfig, Logger logger) {
+    public AliasManager(YamlConfiguration commandConfig, Logger logger) {
         _logger = logger;
 
         _aliases = new HashMap<>();
@@ -18,7 +18,7 @@ public class AliasManager {
                 List<String> aliases = commandConfig.getStringList(name);
                 _aliases.put(name, aliases);
             } catch (Exception ex) {
-                _logger.error("Could not load a command. There may be a problem with the command config file.");
+                _logger.error("Could not load a command. There may be a problem with the commands config file.");
                 _logger.error(ex.toString());
             }
         }

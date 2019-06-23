@@ -1,4 +1,4 @@
-package me.kevinnovak.livecoordinates;
+package me.kevinnovak.livecoordinates.models;
 
 public enum Permission {
     DISPLAY("livecoordinates.display");

@@ -1,5 +1,6 @@
 package me.kevinnovak.livecoordinates;
 
+import me.kevinnovak.livecoordinates.services.InternalsProvider;
 import net.minecraft.server.v1_9_R1.IChatBaseComponent;
 import net.minecraft.server.v1_9_R1.PacketPlayOutChat;
 import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;

@@ -1,7 +1,7 @@
-package me.kevinnovak.livecoordinates.command;
+package me.kevinnovak.livecoordinates.commands;
 
-import me.kevinnovak.livecoordinates.AliasManager;
-import me.kevinnovak.livecoordinates.Logger;
+import me.kevinnovak.livecoordinates.utils.AliasManager;
+import me.kevinnovak.livecoordinates.utils.Logger;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

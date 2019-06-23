@@ -1,4 +1,4 @@
-package me.kevinnovak.livecoordinates;
+package me.kevinnovak.livecoordinates.utils;
 
 import java.util.logging.Level;
 

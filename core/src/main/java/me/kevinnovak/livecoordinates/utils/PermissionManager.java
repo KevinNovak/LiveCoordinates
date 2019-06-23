@@ -1,5 +1,6 @@
-package me.kevinnovak.livecoordinates;
+package me.kevinnovak.livecoordinates.utils;
 
+import me.kevinnovak.livecoordinates.models.Permission;
 import org.bukkit.entity.Player;
 
 public class PermissionManager {
