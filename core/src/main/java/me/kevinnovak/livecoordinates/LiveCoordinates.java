@@ -1,10 +1,9 @@
 package me.kevinnovak.livecoordinates;
 
+import me.kevinnovak.livecoordinates.command.CommandBase;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -24,12 +23,13 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
     private Server _server;
     private Logger _logger;
     private BukkitScheduler _scheduler;
-    private CommandManager _commandManager;
+    private AliasManager _aliasManager;
     private InternalsProvider _internals;
 
     private String _coordinatesFormat;
 
-    private List<String> baseAliases = Arrays.asList("lc", "livecoordinates", "livecoords", "livecoor", "livec", "lcoordinates", "lcoords", "lcoor");
+    private static final String BASE_COMMAND = "lc";
+    private List<String> baseAliases = Arrays.asList("livecoordinates", "livecoords", "livecoor", "livec", "lcoordinates", "lcoords", "lcoor");
 
     @Override
     public void onEnable() {
@@ -63,9 +63,13 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
             _logger.info("Copying default commands file.");
             this.saveResource("commands.yml", false);
         }
+
         _logger.info("Loading commands file.");
         YamlConfiguration commandConfig = YamlConfiguration.loadConfiguration(commandsFile);
-        _commandManager = new CommandManager(commandConfig, _logger);
+        _aliasManager = new AliasManager(commandConfig, _logger);
+
+        _logger.info("Registering commands.");
+        this.getCommand(BASE_COMMAND).setExecutor(new CommandBase(_logger, _aliasManager));
 
         _logger.info("Registering events.");
         _server.getPluginManager().registerEvents(this, this);
@@ -94,39 +98,6 @@ public class LiveCoordinates extends JavaPlugin implements Listener {
         if (fromVector != toVector) {
             updateDisplay(event.getPlayer(), toVector);
         }
-    }
-
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        _logger.info("Command ran");
-        if (!(sender instanceof Player)) {
-            return true;
-        }
-        Player player = (Player) sender;
-
-        String command = cmd.getName().toLowerCase();
-        _logger.info(command);
-        if (!baseAliases.contains(command)) {
-            return true;
-        }
-
-        if (args.length <= 0) {
-            player.sendMessage("help");
-            return true;
-        }
-
-        String subCommand = args[0];
-        if (_commandManager.isCommand("help", subCommand)) {
-            player.sendMessage("help");
-            return true;
-        }
-
-        if (_commandManager.isCommand("toggle", subCommand)) {
-            player.sendMessage("toggle");
-            return true;
-        }
-
-        player.sendMessage("help");
-        return true;
     }
 
     private void updateAllDisplays() {
