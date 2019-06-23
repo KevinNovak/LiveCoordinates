@@ -11,6 +11,10 @@ public class CommandBase implements CommandExecutor {
     private Logger _logger;
     private AliasManager _aliasManager;
 
+    // Commands
+    private CustomCommandExecutor _commandHelp = new CommandHelp();
+    private CustomCommandExecutor _commandToggle = new CommandToggle();
+
     public CommandBase(Logger logger, AliasManager aliasManager) {
         _logger = logger;
         _aliasManager = aliasManager;
@@ -25,22 +29,22 @@ public class CommandBase implements CommandExecutor {
         Player player = (Player) sender;
 
         if (args.length <= 0) {
-            player.sendMessage("help");
+            _commandHelp.execute(player);
             return true;
         }
 
         String subCommand = args[0];
         if (_aliasManager.isAlias("help", subCommand)) {
-            player.sendMessage("help");
+            _commandHelp.execute(player);
             return true;
         }
 
         if (_aliasManager.isAlias("toggle", subCommand)) {
-            player.sendMessage("toggle");
+            _commandToggle.execute(player);
             return true;
         }
 
-        player.sendMessage("help");
+        _commandHelp.execute(player);
         return true;
     }
 }
