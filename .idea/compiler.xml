@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="livecoordinates-craftbukkit_1_9_R1" />
-        <module name="livecoordinates-craftbukkit_1_12_R1" />
-        <module name="livecoordinates-craftbukkit_1_8_R3" />
-        <module name="livecoordinates-craftbukkit_1_8_R2" />
-        <module name="livecoordinates-craftbukkit_1_8_R1" />
-        <module name="livecoordinates-craftbukkit_1_11_R1" />
         <module name="livecoordinates-craftbukkit_1_14_R1" />
-        <module name="livecoordinates-craftbukkit_1_13_R2" />
-        <module name="livecoordinates-core" />
-        <module name="livecoordinates-craftbukkit_1_10_R1" />
         <module name="livecoordinates-craftbukkit_1_13_R1" />
+        <module name="livecoordinates-craftbukkit_1_8_R2" />
+        <module name="livecoordinates-craftbukkit_1_15_R1" />
+        <module name="livecoordinates-craftbukkit_1_8_R3" />
         <module name="livecoordinates-craftbukkit_1_9_R2" />
+        <module name="livecoordinates-craftbukkit_1_9_R1" />
+        <module name="livecoordinates-craftbukkit_1_8_R1" />
+        <module name="livecoordinates-core" />
+        <module name="livecoordinates-craftbukkit_1_11_R1" />
+        <module name="livecoordinates-craftbukkit_1_12_R1" />
+        <module name="livecoordinates-craftbukkit_1_13_R2" />
+        <module name="livecoordinates-craftbukkit_1_10_R1" />
       </profile>
       <profile name="Annotation profile for LiveCoordinates" enabled="true">
         <sourceOutputDir name="../target/generated-sources/annotations" />
@@ -34,6 +35,7 @@
       <module name="livecoordinates-craftbukkit_1_13_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_13_R2" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_14_R1" target="1.8" />
+      <module name="livecoordinates-craftbukkit_1_15_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_8_R1" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_8_R2" target="1.8" />
       <module name="livecoordinates-craftbukkit_1_8_R3" target="1.8" />

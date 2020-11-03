@@ -104,5 +104,10 @@
             <artifactId>livecoordinates-craftbukkit_1_14_R1</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_15_R1</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 </project>
