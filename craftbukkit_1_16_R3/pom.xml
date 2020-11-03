@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>me.kevinnovak</groupId>
-    <artifactId>livecoordinates-core</artifactId>
+    <artifactId>livecoordinates-craftbukkit_1_16_R3</artifactId>
     <version>${project.parent.version}</version>
 
     <packaging>jar</packaging>
@@ -24,11 +24,6 @@
                 <targetPath>.</targetPath>
                 <filtering>true</filtering>
                 <directory>${basedir}/src/main/resources/</directory>
-                <includes>
-                    <include>commands.yml</include>
-                    <include>config.yml</include>
-                    <include>plugin.yml</include>
-                </includes>
             </resource>
         </resources>
         <plugins>
@@ -46,16 +41,14 @@
     <dependencies>
         <dependency>
             <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
+            <artifactId>craftbukkit</artifactId>
             <version>1.16.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
-
-    <repositories>
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-    </repositories>
 </project>

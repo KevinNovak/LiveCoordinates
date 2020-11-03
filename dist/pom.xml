@@ -109,5 +109,20 @@
             <artifactId>livecoordinates-craftbukkit_1_15_R1</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_16_R1</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_16_R2</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>me.kevinnovak</groupId>
+            <artifactId>livecoordinates-craftbukkit_1_16_R3</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
 </project>
