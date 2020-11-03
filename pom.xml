@@ -6,7 +6,7 @@
 
     <groupId>me.kevinnovak</groupId>
     <artifactId>livecoordinates-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>LiveCoordinates</name>
     <description>View your coordinates in real time!</description>
